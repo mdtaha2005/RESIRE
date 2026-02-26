@@ -1,0 +1,423 @@
+/* 🌸 Global Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  background: linear-gradient(180deg, #fff9fb 0%, #fff4f8 100%);
+  color: #444;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* 🌷 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #ffffffc8;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #d68ca3;
+}
+
+.logo .tagline {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  color: #310404;
+  line-height: 0.8;
+  font-size: small;
+}
+.logo .tagline span{
+  font-size: 0.8rem;
+}
+.logo .logo-text{
+  font-size:3rem;
+}
+#eleg{
+  font-size: large;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #d68ca3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+  color: #d68ca3;
+}
+
+/* 🍑 Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #d68ca3;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 🎬 Poster Slider */
+.poster-slider {
+
+  position: relative;
+  width: 90%;           /* slightly narrower than full width */
+  max-width: 1200px;    /* optional: limit max width */
+  height: 400px;        /* reduce height */
+  overflow: hidden;
+  margin: 40px auto;    /* centers the slider and adds vertical spacing */
+  border-radius: 6px;  /* optional: subtle rounded edges */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* optional: soft shadow */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;         /* will now use new height 300px */
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 192, 203, 0.5);
+  border: none;
+  font-size: 2em;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 192, 203, 0.8);
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* Sellers heading */
+.sellers {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #c46f8e;
+  text-align: center;
+  margin: 10px 0; /* reduced from 20px */
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* Optional: subtle underline accent */
+.sellers::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e7a9c3;
+  margin: 8px auto 0; /* reduced gap below heading */
+  border-radius: 2px;
+}
+
+/* Category filter */
+.category-filter {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 10px 0 30px 0; /* reduced top margin, keep some bottom spacing */
+}
+
+/* Products section */
+.products {
+  padding: 2px 25px; /* reduced from 60px */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.products h2 {
+  color: #c46f8e;
+  font-size: 2.6em;
+  margin-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.productgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.productcard {
+  background: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.productcard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(212, 128, 160, 0.15);
+}
+
+.product-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  border-bottom: 1px solid #f3dbe3;
+}
+
+.productcard:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 15px 20px 25px;
+}
+
+.product-info h3 {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 1em;
+  color: #c46f8e;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* ✨ Hover Overlay */
+.product-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.productcard:hover .product-description {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-description .product-image2 {
+  width: 100%;
+  max-height: 180px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.product-description .product-image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.product-description .product-image2 img:hover {
+  transform: scale(1.05);
+}
+
+.product-description p {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.product-description .price {
+  color: #c46f8e;
+  font-weight: 600;
+}
+
+.buy-instagram {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #c46f8e, #e7a9c3);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(196, 111, 142, 0.3);
+}
+
+.buy-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(196, 111, 142, 0.4);
+  background: linear-gradient(135deg, #e7a9c3, #c46f8e);
+}
+
+.productcard:hover .product-description,
+.productcard.active .product-description {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* 🌸 Footer */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 35px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95em;
+  color: #777;
+  border-top: 1px solid #f3dbe3;
+}
+
+footer p span {
+  color: #c46f8e;
+  font-weight: 500;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  header .logo {
+    gap: 10px;
+  }
+
+  header .logo .tagline {
+    font-size: 0.75em;
+  }
+
+  .poster-slider {
+    height: 300px;
+  }
+
+  .arrow {
+    font-size: 1.5em;
+    padding: 7px 10px;
+  }
+
+  .products {
+    padding: 2px 25px;
+  }
+
+  .productgrid {
+    gap: 25px;
+  }
+
+  .product-image img {
+    height: 220px;
+  }
+}

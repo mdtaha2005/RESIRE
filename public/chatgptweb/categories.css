@@ -1,0 +1,30 @@
+/* 🌸 Category Filter */
+.category-filter {
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.category-filter label {
+  font-weight: 500;
+  color: #c46f8e;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.category-filter select {
+  padding: 8px 16px;
+  border: 1px solid #e7a9c3;
+  border-radius: 8px;
+  background: #fff;
+  color: #555;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-filter select:hover {
+  box-shadow: 0 4px 10px rgba(196, 111, 142, 0.2);
+  border-color: #c46f8e;
+}

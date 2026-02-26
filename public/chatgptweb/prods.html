@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESIRE</title>
+    <link rel="stylesheet" href="prods.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><span class="logo-text">Resire</span>
+            <span class="tagline"><span>Only for the</span>
+                <span id="eleg">Elegant &lt3</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./categories.html" class="active">Categories</a></li>
+                <li><a href="./about.html">About</a></li>
+    
+            </ul>
+        </nav>
+
+        <!-- 👇 The real hamburger button -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+  </select>
+</section>
+
+      <main class="product-page">
+    <div id="product-details" class="product-details"></div>
+  </main>
+
+
+    <footer>
+        <p>© 2024 Resire | Crafted with 💕 for elegance</p>
+    </footer>
+
+    <script src="prods.js"></script>
+    
+    
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('show');
+        });
+
+
+    </script>
+</body>
+
+</html>

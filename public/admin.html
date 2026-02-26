@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+    <h1>Admin Panel</h1>
+    <div id="message" style="margin-bottom: 10px;"></div>
+
+    <!-- Form to add new product -->
+    <form id="add-product-form">
+        <input type="text" id="name" placeholder="Product Name" required><br>
+        <input type="text" id="price" placeholder="Price" min="1" required><br>
+        <input type="text" id="image" placeholder="Image URL" required><br>
+        <input type="text" id="ad_images" placeholder="other Image URL"><br>
+        <textarea id="description" placeholder="Description" required></textarea><br>
+        <input type="text" id="tags" placeholder="Enter Tags" required><br>
+        <input type="hidden" id="productId">
+        <button type="submit">Add Product</button>
+        
+
+    </form>
+    <button id="logout">Logout</button>
+    <hr>
+    <table border="1"id="product-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Tags</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        
+        <tbody id="product-table-body">
+            <!-- Products will be injected here by JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Section to display products -->
+    <div id="product-list"></div>
+
+    
+
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

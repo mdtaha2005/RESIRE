@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lustre Diamonds</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="categories.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><span class="logo-text">Resire</span>
+      <span class="tagline"><span>Home To</span>
+        <span id="eleg">Elegance &lt3</span>
+    </div>
+    <nav>
+      <ul>
+
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="./categories.html">Categories</a></li>
+        <li><a href="./about.html">About</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- 👇 The real hamburger button -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="poster-slider">
+    <div class="slides">
+      <div class="slide active"
+        style="background-image: url('./images/WhatsApp\ Image\ 2025-10-05\ at\ 17.19.27_9e47cacc.jpg');"></div>
+      <div class="slide" style="background-image: url('./images/resirelogo.jpg');"></div>
+      <div class="slide" style="background-image: url('./images/resirelogo.jpg');"></div>
+    </div>
+
+    <button class="arrow left-arrow">&#10094;</button>
+    <button class="arrow right-arrow">&#10095;</button>
+  </section>
+  <h2 class="sellers">Our BestSellers</h2>
+  <!-- 🌸 Category Filter -->
+  <section class="category-filter">
+    <label for="categorySelect">Browse by Category:</label>
+    <select id="categorySelect">
+      <option value="all">All Products</option>
+    </select>
+  </section>
+
+  <section class="products">
+    <div id="product-grid" class="productgrid"></div>
+  </section>
+
+  <footer>
+    <p>© 2024 Resire | Crafted with 💕 for elegance</p>
+  </footer>
+
+  <!-- 🌸 Hamburger Toggle Script -->
+  <script src="index.js"></script>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      nav.classList.toggle('show');
+    });
+    // Toggle overlay on tap
+    document.querySelectorAll('.productcard').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+
+  </script>
+</body>
+
+</html>
