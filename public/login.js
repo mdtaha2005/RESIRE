@@ -10,7 +10,7 @@ form.addEventListener("submit",async (e)=>{
 
     try{
 
-        const res = await fetch("http://localhost:3000/login",{
+        const res = await fetch("/login",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username,password})
@@ -24,7 +24,7 @@ form.addEventListener("submit",async (e)=>{
             console.log("working");
             window.location.href="./admin.html";
         }else{
-            alert(data.err);
+            alert("Invalid Password");
         }
 
     }catch(err){

@@ -5,7 +5,7 @@ if (!token) {
 }
 async function checkvalidity() {
 
-  const res = await fetch("http://localhost:3000/login/verify_token", {
+  const res = await fetch("/login/verify_token", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ checkvalidity();
 
 async function loadProducts() {
   try {
-    const res = await fetch('http://localhost:3000/routes/allProd'); // your backend endpoint
+    const res = await fetch('/routes/allProd'); // your backend endpoint
     const products = await res.json();
 
 
@@ -60,7 +60,7 @@ tableBody.addEventListener('click', async (e) => {
   const direction = e.target.classList.contains('move-up') ? -1 : 1;
 
   try {
-    const res = await fetch('http://localhost:3000/routes/move_priority', {
+    const res = await fetch('/routes/move_priority', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ productId, direction })
@@ -99,7 +99,7 @@ addForm.addEventListener('submit', async (e) => {
   try {
     if (id) {
       // UPDATE existing product
-      const res = await fetch(`http://localhost:3000/routes/updateProd/${id}`, {
+      const res = await fetch(`/routes/updateProd/${id}`, {
         method: 'PUT',
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +111,7 @@ addForm.addEventListener('submit', async (e) => {
       console.log('Product updated:', await res.json());
     } else {
       // ADD new product
-      const res = await fetch('http://localhost:3000/routes/newProd', {
+      const res = await fetch('/routes/newProd', {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -149,7 +149,7 @@ logout.addEventListener('click',async (e) =>{
 async function deleteProduct(id) {
 
   try {
-    const res = await fetch(`http://localhost:3000/routes/deltProd/${id}`, {
+    const res = await fetch(`/routes/deltProd/${id}`, {
       method: 'DELETE',
       headers: {
         "Content-Type": "application/json",

@@ -2,7 +2,7 @@ const productGrid = document.getElementById('product-grid');
 
 async function loadProducts() {
   try {
-    const res = await fetch('http://localhost:3000/routes/allProd'); // your backend endpoint
+    const res = await fetch('/routes/allProd'); // your backend endpoint
     const products = await res.json();
 
     productGrid.innerHTML = ''; // clear existing

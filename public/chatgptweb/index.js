@@ -55,7 +55,7 @@ function viewProduct(id) {
 
 async function getProducts() {
   try {
-    const res = await fetch("http://localhost:3000/routes/allProd");
+    const res = await fetch("/routes/allProd");
     const products = await res.json();
     renderProducts(products);
   } catch (err) {
@@ -68,7 +68,7 @@ async function getProducts() {
 // ======================================
 async function getCategories() {
   try {
-    const res = await fetch("http://localhost:3000/routes/allCategories");
+    const res = await fetch("/routes/allCategories");
     const categories = await res.json();
 
     // Clear dropdown first
@@ -90,7 +90,7 @@ async function getCategories() {
 // ======================================
 async function getProductsByTag(tag) {
   try {
-    const res = await fetch("http://localhost:3000/routes/categories", {
+    const res = await fetch("/routes/categories", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ tags: tag })

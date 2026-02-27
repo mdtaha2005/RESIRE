@@ -11,7 +11,7 @@ async function loadProduct() {
   }
 
   try {
-    const res = await fetch(`http://localhost:3000/routes/prods/${productId}`);
+    const res = await fetch(`/routes/prods/${productId}`);
     if (!res.ok) throw new Error("Product not found");
 
     const product = await res.json();
@@ -46,7 +46,7 @@ async function loadProduct() {
         <h2>${product.name}</h2>
         <p class="product-desc">${product.description}</p>
         <p class="price">₹${product.price}</p>
-        <a href="#" class="buy-btn">Buy on Instagram</a>
+        <a href="https://www.instagram.com/resinresire_/" class="buy-btn">Buy on Instagram</a>
       </div>
     `;
 
