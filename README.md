@@ -13,6 +13,10 @@ The platform allows users to browse resin jewellery products while enabling admi
 The project demonstrates **RESTful backend architecture, authentication, image storage integration, and cloud deployment**.
 
 ---
+## License
+
+This project is shared for portfolio and educational viewing only.
+Copying, modifying, or redistributing the code without permission is not allowed.
 
 # 🚀 Live Demo
 
@@ -162,3 +166,9 @@ https://github.com/mdtaha2005
 # ⭐ Support
 
 If you found this project helpful or interesting, consider **starring the repository**.
+
+
+## License
+
+This project is shared for portfolio and educational viewing only.
+Copying, modifying, or redistributing the code without permission is not allowed.
